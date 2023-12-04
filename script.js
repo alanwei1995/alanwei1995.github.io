@@ -7,6 +7,7 @@ document.getElementById('yahooLogin').addEventListener('click', function () {
     var redirectUri = encodeURIComponent('https://alanwei1995.github.io/');
     var yahooAuthUrl = `https://api.login.yahoo.com/oauth2/request_auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&language=en-us`;
 
+    console.log("111");
     window.location.href = yahooAuthUrl;
 });
 
