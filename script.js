@@ -12,10 +12,12 @@ document.getElementById('yahooLogin').addEventListener('click', function () {
 
 function getAuthorizationCode() {
     const queryString = window.location.search;
+    console.log("Query String:", queryString);
     const urlParams = new URLSearchParams(queryString);
     const code = urlParams.get('code');
     if (code) {
         updateStatus("Authorization code received: " + code);
+        console.log("Authorization code received: " + code);
         return code;
     }
     return null;
